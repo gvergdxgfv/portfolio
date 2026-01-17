@@ -82,7 +82,7 @@ export default function Home() {
       <div className="gradient-circle"></div>
       <div className="gradient-circle-bottom"></div>
 
-      <div className="container mx-auto mb-10">
+      <div className="container mx-auto mb-10 px-4 tablet:px-6 laptop:px-0">
         <Header
           handleWorkScroll={handleWorkScroll}
           handleAboutScroll={handleAboutScroll}
@@ -94,20 +94,20 @@ export default function Home() {
 
             <h1
               ref={textOne}
-              className="text-3xl tablet:text-6xl laptop:text-6xl laptopl:text-8xl p-1 tablet:p-2 font-bold w-4/5 mob:w-full laptop:w-4/5"
+              className="text-3xl tablet:text-6xl laptop:text-6xl laptopl:text-8xl py-1 tablet:py-2 font-bold w-4/5 mob:w-full laptop:w-4/5"
             >
               {data.headerTaglineOne}
             </h1>
             <h1
               ref={textTwo}
-              className="text-3xl tablet:text-6xl laptop:text-6xl laptopl:text-8xl p-1 tablet:p-2 font-semibold w-full laptop:w-4/5 text-gray-300"
+              className="text-3xl tablet:text-6xl laptop:text-6xl laptopl:text-8xl py-1 tablet:py-2 font-semibold w-full laptop:w-4/5 text-gray-300"
             >
               I'm{" "}
               <span className="gradient-text font-bold">{data.name}</span>
             </h1>
             <h1
               ref={textThree}
-              className="text-3xl tablet:text-6xl laptop:text-6xl laptopl:text-8xl p-1 tablet:p-2 font-semibold w-full laptop:w-4/5"
+              className="text-3xl tablet:text-6xl laptop:text-6xl laptopl:text-8xl py-1 tablet:py-2 font-semibold w-full laptop:w-4/5"
             >
               <TypingAnimation
                 texts={[
@@ -125,7 +125,7 @@ export default function Home() {
             </h1>
             <h1
               ref={textFour}
-              className="text-3xl tablet:text-6xl laptop:text-6xl laptopl:text-8xl p-1 tablet:p-2 font-medium w-full laptop:w-4/5 text-gray-400"
+              className="text-3xl tablet:text-6xl laptop:text-6xl laptopl:text-8xl py-1 tablet:py-2 font-medium w-full laptop:w-4/5 text-gray-400"
             >
               {data.headerTaglineFour}
             </h1>
@@ -164,7 +164,7 @@ export default function Home() {
 
         {/* About / Contact */}
         <div ref={aboutRef}>
-          <div className="mt-10 laptop:mt-40 p-2 laptop:p-0">
+          <div className="mt-10 laptop:mt-40">
             <h1 className="text-2xl text-bold">About.</h1>
             <p className="tablet:m-10 mt-2 text-xl laptop:text-3xl w-full laptop:w-3/5">
               {data.aboutpara}

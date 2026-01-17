@@ -6,7 +6,7 @@ const ArchitectureSection = () => {
     const renders = data.architectureSection?.images || [];
 
     return (
-        <div className="mt-10 laptop:mt-30 p-2 laptop:p-0">
+        <div className="mt-10 laptop:mt-30 py-2 laptop:py-0">
             <h1 className="text-2xl font-bold text-white">BIM & Architecture.</h1>
             <p className="mt-2 text-xl laptop:text-3xl w-full laptop:w-3/5 text-gray-300">
                 Sustainable Design & High-Fidelity 3D Modeling with Revit & Twinmotion.

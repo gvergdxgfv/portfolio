@@ -16,7 +16,7 @@ const GameSection = () => {
     const projectUrl = data.projects.find(p => p.title === "Third Person Fighter Game")?.url;
 
     return (
-        <div className="mt-10 laptop:mt-30 p-2 laptop:p-0">
+        <div className="mt-10 laptop:mt-30 py-2 laptop:py-0">
             <h1 className="text-2xl font-bold text-white">Third Person Fighter Game.</h1>
             <p className="mt-2 text-xl laptop:text-3xl w-full laptop:w-3/5 text-gray-300">
                 Third Person Fighter with Combat AI, Rigging, and Scripting.
