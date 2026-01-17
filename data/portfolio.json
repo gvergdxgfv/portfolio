@@ -1,1 +1,190 @@
-{"name":"Chetan","headerTaglineOne":"Hello 👋","headerTaglineTwo":"I'm Chetan Verma - curious","headerTaglineThree":"designer and devloper","headerTaglineFour":" based in New Delhi, India.","showCursor":true,"showBlog":true,"darkMode":true,"showResume":true,"socials":[{"id":"1","title":"Github","link":"https://github.com/chetanverma16"},{"id":"2","title":"LinkedIn","link":"https://www.linkedin.com/in/chetanverma7/"},{"id":"3","title":"Twitter","link":"https://twitter.com/realchetanverma"},{"id":"4","title":"Blog","link":"https://blog.chetanverma.com/"},{"id":"5","title":"Email","link":"mailto:hello@chetanverma.com"}],"projects":[{"id":"1","title":"Project One Test","description":"Web Design","imageSrc":"https://images.unsplash.com/photo-1487837647815-bbc1f30cd0d2?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8Njl8fHBhc3RlbHxlbnwwfHwwfA%3D%3D&auto=format&fit=crop&w=400&q=60","url":"http://chetanverma.com/"},{"id":"2","title":"Project Two","description":"Web Development","imageSrc":"https://images.unsplash.com/photo-1605153864431-a2795a1b2f95?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MXwyNTY3ODl8fGVufDB8fHw%3D&auto=format&fit=crop&w=400&q=60","url":"http://chetanverma.com/"},{"id":"3","title":"Project Three","description":"Design","imageSrc":"https://images.unsplash.com/photo-1504083898675-c896ecdae86e?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8MjJ8fHBhc3RlbHxlbnwwfHwwfA%3D%3D&auto=format&fit=crop&w=400&q=60","url":"http://chetanverma.com/"},{"id":"4","title":"Project Four","description":"Marketing","imageSrc":"https://images.unsplash.com/photo-1492171983775-a51717616c0d?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8NjB8fHBhc3RlbHxlbnwwfHwwfA%3D%3D&auto=format&fit=crop&w=400&q=60","url":"http://chetanverma.com/"},{"id":"5","title":"Project Five","description":"Development","imageSrc":"https://images.unsplash.com/photo-1534239143101-1b1c627395c5?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8NzZ8fHBhc3RlbHxlbnwwfHwwfA%3D%3D&auto=format&fit=crop&w=400&q=60","url":"http://chetanverma.com/"},{"id":"6","title":"Project Six","description":"Design & Development","imageSrc":"https://images.unsplash.com/photo-1517479149777-5f3b1511d5ad?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTAyfHxwYXN0ZWx8ZW58MHx8MHw%3D&auto=format&fit=crop&w=400&q=60","url":"http://chetanverma.com/"}],"services":[{"id":"1","title":"Art Direction","description":"We help with the creation and development of online advertising ideas, with particular focus on their visual appearance."},{"id":"2","title":"Branding","description":"We design key brand elements such as the logo, color scheme, typography, and other design components that makes your brand stand out from competitors."},{"id":"3","title":"Web Design","description":"We build and optimize your online presence.  Website is the digital entry point into your business and a powerful revenue channel."},{"id":"4","title":"3D Design","description":"We combine creative design and technical skills to build striking 3D visualisations that bring your project to life."}],"aboutpara":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.","resume":{"tagline":"👋  I'm a software engineer, product designer.","description":"I have delivered world-class user experiences to millions of people. Well-versed with React, Javascript, and most of the Web frameworks.","experiences":[{"id":"1","dates":"March 2022 - Present","type":"Full Time","position":"Frontend Engineer at X","bullets":"Bullet One, Bullet Two"},{"id":"d495c23b-4f65-479a-9b8a-cfbc1c089725","dates":"July 2020 - March 2022","type":"Full Time","position":"Frontend Engineer at X","bullets":"Worked on the frontend of a React application, Worked on the frontend of a React application"}],"education":{"universityName":"University X","universityDate":"2016-2020","universityPara":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book"},"languages":["Javascript","HTML5","CSS","Python","Go"],"frameworks":["React","Typescript","NodeJs"],"others":["Figma","AdobeXD","AWS"]}}
+{
+    "gameSection": {
+        "videoUrl": "https://youtu.be/5s3cROiRvlc"
+    },
+    "architectureSection": {
+        "images": [
+            "https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/dac1e3242312179.696a3c105be65.jpg",
+            "https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/8a5a9b242312179.696a3c105e051.jpg",
+            "https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/b2af23242312179.696a3c105c79e.jpg",
+            "https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/8b7b1d242312179.696a3c105d738.jpg",
+            "https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/10b446242312179.696a3c105b528.jpg",
+            "https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/b465ec242312179.696a3c105fda2.jpg",
+            "https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/f8c433242312179.696a3c105f6b6.jpg",
+            "https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/f0ddb6242312179.696a3c10611b7.png",
+            "https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/a840ef242312179.696a3c105e677.jpg",
+            "https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/b78209242312179.696a3c105d0ea.jpg",
+            "https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/06c07f242312179.696a3c10604cf.jpg",
+            "https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/3c7e3b242312179.696a3c106254d.png",
+            "https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/cff994242312179.696a3c1061b7d.jpg",
+            "https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/ade5c3242312179.696a3c1060c08.png",
+            "https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/814482242312179.696a3c1062c24.png",
+            "https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/931d39242312179.696a3c105f008.jpg"
+        ]
+    },
+    "musicSection": {
+        "tracks": [
+            "4ha0Z4tnU6K70HXmeqTjQq",
+            "1BeTzaJwDG1Dq5tzFjQs5H",
+            "76AaAgxSFTiHluQxF7vp16"
+        ]
+    },
+    "name": "Vedant Tiwari",
+    "headerTaglineOne": "Hello 👋",
+    "headerTaglineTwo": "I'm Vedant- Founder of",
+    "headerTaglineThree": "CivilSathi & Engineer",
+    "headerTaglineFour": "based in India.",
+    "showCursor": true,
+    "showBlog": true,
+    "blogUrl": "https://evlhacks.blogspot.com/",
+    "darkMode": true,
+    "showResume": false,
+    "socials": [
+        {
+            "id": "2",
+            "title": "LinkedIn",
+            "link": "https://www.linkedin.com/in/vedant-tiwari-3104ba262/"
+        },
+        {
+            "id": "5",
+            "title": "Email",
+            "link": "mailto:vannyapeehu@gmail.com"
+        }
+    ],
+    "projects": [
+        {
+            "id": "1",
+            "title": "CivilSathi",
+            "description": "A comprehensive Construction Management SaaS that solves critical site problems including attendance tracking, automated PDF generation, and real-time alerts via Telegram integration.",
+            "imageSrc": "/images/civilsathi_preview.png",
+            "url": "https://play.google.com/store/apps/details?id=com.buildit.buildit_flutter&pcampaignid=web_share"
+        },
+        {
+            "id": "2",
+            "title": "Third Person Fighter Game",
+            "description": "An immersive Third Person Fighter developed in Unity. Features include custom Model Rigging, fluid Animation Design, complex C# Scripting, and detailed Environment Design.",
+            "imageSrc": "https://img.itch.zone/aW1nLzI1MDQwNjI2LnBuZw==/original/Q2QPtQ.png",
+            "url": "https://eviloid.itch.io/chittithegame"
+        },
+        {
+            "id": "3",
+            "title": "BIM Architecture",
+            "description": "High-fidelity Architectural Visualization and Information Modeling. specialized in Revit & Twinmotion for sustainable and precise design.",
+            "imageSrc": "https://www.behance.net/gallery/242312179/Architecture-portfolio/modules/1397217087",
+            "url": "https://www.behance.net/gallery/242312179/Architecture-portfolio"
+        },
+        {
+            "id": "4",
+            "title": "Music Production",
+            "description": "Professional Audio Mixing and Composition. Specializing in Trap, Hip-hop, Electronic, and RnB genres.",
+            "imageSrc": "https://drive.google.com/file/d/1hHUPJpo0OJb3sK8Ml-vbWvDlZXEwDsco/view?usp=sharing",
+            "url": "https://www.instagram.com/prodbyeviloid?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+        }
+    ],
+    "services": [
+        {
+            "id": "1",
+            "title": "SaaS Development",
+            "description": "Full-stack development for scalable construction and management software."
+        },
+        {
+            "id": "2",
+            "title": "Game Development",
+            "description": "Unity 3D, C# scripting, and immersive gameplay mechanics."
+        },
+        {
+            "id": "3",
+            "title": "3D Visualization",
+            "description": "Architectural rendering using Revit and Twinmotion."
+        },
+        {
+            "id": "4",
+            "title": "Sound Design",
+            "description": "Professional music production, mixing, and mastering."
+        }
+    ],
+    "aboutpara": "I am a Creative Technologist and the Founder of CivilSathi, merging the worlds of Construction Tech, Game Development, and Music. I am currently pursuing Civil Engineering at NIT Hamirpur, building tools that solve real-world problems while crafting immersive digital experiences.",
+    "resume": {
+        "tagline": "👋  I'm a Creative Technologist.",
+        "description": "Founder of CivilSathi. Expert in React, Unity, and Architectural Design.",
+        "experiences": [
+            {
+                "id": "1",
+                "dates": "2025 - Present",
+                "type": "Founder",
+                "position": "CivilSathi",
+                "bullets": "Construction Management SaaS, User Acquisition, Full Stack Dev"
+            },
+            {
+                "id": "2",
+                "dates": "2010 - 2023",
+                "type": "Student",
+                "position": "Jawwaharlal Nehru School",
+                "bullets": "91% (10th), 82% (12th)"
+            }
+        ],
+        "education": {
+            "universityName": "NIT Hamirpur",
+            "universityDate": "2023-2027",
+            "universityPara": "Bachelor of Technology(B.Tech). Focused on BIM, CAD, and Sustainable Design."
+        },
+        "languages": [
+            {
+                "name": "Javascript",
+                "level": "75%"
+            },
+            {
+                "name": "C#",
+                "level": "85%"
+            },
+            {
+                "name": "Python",
+                "level": "80%"
+            },
+            {
+                "name": "SQL",
+                "level": "75%"
+            }
+        ],
+        "frameworks": [
+            {
+                "name": "React / Next.js",
+                "level": "60%"
+            },
+            {
+                "name": "Flutter / App Dev",
+                "level": "70%"
+            },
+            {
+                "name": "Unity / Game Dev",
+                "level": "65%"
+            },
+            {
+                "name": "Gen AI & Automation",
+                "level": "80%"
+            }
+        ],
+        "others": [
+            {
+                "name": "Revit / AutoCAD",
+                "level": "90%"
+            },
+            {
+                "name": "Twinmotion",
+                "level": "85%"
+            },
+            {
+                "name": "Music Prod / Mixing",
+                "level": "90%"
+            },
+            {
+                "name": "FL Studio",
+                "level": "95%"
+            },
+            {
+                "name": "Premiere Pro / AE",
+                "level": "80%"
+            }
+        ]
+    }
+}

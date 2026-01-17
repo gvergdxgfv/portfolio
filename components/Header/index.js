@@ -6,12 +6,16 @@ import Button from "../Button";
 // Local Data
 import data from "../../data/portfolio.json";
 
-const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
+const Header = ({ handleWorkScroll, handleAboutScroll, isBlog, handleArchitectureScroll }) => {
   const router = useRouter();
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
-  const { name, showBlog, showResume } = data;
+  const { name, showBlog, showResume, blogUrl } = data;
+
+  // Extract external URLs
+  const civilSathiUrl = data.projects.find(p => p.title === "CivilSathi")?.url;
+  const musicUrl = data.projects.find(p => p.title === "Music Production")?.url;
 
   useEffect(() => {
     setMounted(true);
@@ -39,9 +43,8 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                   >
                     <img
                       className="h-6"
-                      src={`/images/${
-                        theme === "dark" ? "moon.svg" : "sun.svg"
-                      }`}
+                      src={`/images/${theme === "dark" ? "moon.svg" : "sun.svg"
+                        }`}
                     ></img>
                   </Button>
                 )}
@@ -49,35 +52,40 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                 <Popover.Button>
                   <img
                     className="h-5"
-                    src={`/images/${
-                      !open
-                        ? theme === "dark"
-                          ? "menu-white.svg"
-                          : "menu.svg"
-                        : theme === "light"
+                    src={`/images/${!open
+                      ? theme === "dark"
+                        ? "menu-white.svg"
+                        : "menu.svg"
+                      : theme === "light"
                         ? "cancel.svg"
                         : "cancel-white.svg"
-                    }`}
+                      }`}
                   ></img>
                 </Popover.Button>
               </div>
             </div>
             <Popover.Panel
-              className={`absolute right-0 z-10 w-11/12 p-4 ${
-                theme === "dark" ? "bg-slate-800" : "bg-white"
-              } shadow-md rounded-md`}
+              className={`absolute right-0 z-10 w-11/12 p-4 ${theme === "dark" ? "bg-slate-800" : "bg-white"
+                } shadow-md rounded-md`}
             >
               {!isBlog ? (
                 <div className="grid grid-cols-1">
                   <Button onClick={handleWorkScroll}>Work</Button>
+                  <Button onClick={handleArchitectureScroll}>Architecture</Button>
+                  {civilSathiUrl && (
+                    <Button onClick={() => window.open(civilSathiUrl, "_blank")}>CivilSathi</Button>
+                  )}
+                  {musicUrl && (
+                    <Button onClick={() => window.open(musicUrl, "_blank")}>Music</Button>
+                  )}
                   <Button onClick={handleAboutScroll}>About</Button>
                   {showBlog && (
-                    <Button onClick={() => router.push("/blog")}>Blog</Button>
+                    <Button onClick={() => blogUrl ? window.open(blogUrl, "_blank") : router.push("/blog")}>Blog</Button>
                   )}
                   {showResume && (
                     <Button
                       onClick={() =>
-                        window.open("mailto:hello@chetanverma.com")
+                        window.open("mailto:vannyapeehu@gmail.com")
                       }
                     >
                       Resume
@@ -85,7 +93,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                   )}
 
                   <Button
-                    onClick={() => window.open("mailto:hello@chetanverma.com")}
+                    onClick={() => window.open("mailto:vannyapeehu@gmail.com")}
                   >
                     Contact
                   </Button>
@@ -96,7 +104,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                     Home
                   </Button>
                   {showBlog && (
-                    <Button onClick={() => router.push("/blog")}>Blog</Button>
+                    <Button onClick={() => blogUrl ? window.open(blogUrl, "_blank") : router.push("/blog")}>Blog</Button>
                   )}
                   {showResume && (
                     <Button
@@ -108,7 +116,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                   )}
 
                   <Button
-                    onClick={() => window.open("mailto:hello@chetanverma.com")}
+                    onClick={() => window.open("mailto:vannyapeehu@gmail.com")}
                   >
                     Contact
                   </Button>
@@ -119,9 +127,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
         )}
       </Popover>
       <div
-        className={`mt-10 hidden flex-row items-center justify-between sticky ${
-          theme === "light" && "bg-white"
-        } dark:text-white top-0 z-10 tablet:flex`}
+        className={`mt-10 hidden flex-row items-center justify-between sticky top-0 z-50 tablet:flex glass p-4 rounded-b-2xl mb-10 transition-all ${theme === "light" && "bg-white"}`}
       >
         <h1
           onClick={() => router.push("/")}
@@ -132,9 +138,16 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
         {!isBlog ? (
           <div className="flex">
             <Button onClick={handleWorkScroll}>Work</Button>
+            <Button onClick={handleArchitectureScroll}>Architecture</Button>
+            {civilSathiUrl && (
+              <Button onClick={() => window.open(civilSathiUrl, "_blank")}>CivilSathi</Button>
+            )}
+            {musicUrl && (
+              <Button onClick={() => window.open(musicUrl, "_blank")}>Music</Button>
+            )}
             <Button onClick={handleAboutScroll}>About</Button>
             {showBlog && (
-              <Button onClick={() => router.push("/blog")}>Blog</Button>
+              <Button onClick={() => blogUrl ? window.open(blogUrl, "_blank") : router.push("/blog")}>Blog</Button>
             )}
             {showResume && (
               <Button
@@ -145,7 +158,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
               </Button>
             )}
 
-            <Button onClick={() => window.open("mailto:hello@chetanverma.com")}>
+            <Button onClick={() => window.open("mailto:vannyapeehu@gmail.com")}>
               Contact
             </Button>
             {mounted && theme && data.darkMode && (
@@ -163,7 +176,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
           <div className="flex">
             <Button onClick={() => router.push("/")}>Home</Button>
             {showBlog && (
-              <Button onClick={() => router.push("/blog")}>Blog</Button>
+              <Button onClick={() => blogUrl ? window.open(blogUrl, "_blank") : router.push("/blog")}>Blog</Button>
             )}
             {showResume && (
               <Button
@@ -174,7 +187,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
               </Button>
             )}
 
-            <Button onClick={() => window.open("mailto:hello@chetanverma.com")}>
+            <Button onClick={() => window.open("mailto:vannyapeehu@gmail.com")}>
               Contact
             </Button>
 
