@@ -17,8 +17,8 @@ const GameSection = () => {
 
     return (
         <div className="mt-10 laptop:mt-30 p-2 laptop:p-0">
-            <h1 className="text-2xl text-bold">Third Person Fighter Game.</h1>
-            <p className="mt-2 text-xl laptop:text-3xl w-full laptop:w-3/5 text-gray-500">
+            <h1 className="text-2xl font-bold text-white">Third Person Fighter Game.</h1>
+            <p className="mt-2 text-xl laptop:text-3xl w-full laptop:w-3/5 text-gray-300">
                 Third Person Fighter with Combat AI, Rigging, and Scripting.
             </p>
             <div className="mt-10 w-full aspect-video rounded-lg overflow-hidden bg-black relative mb-10">

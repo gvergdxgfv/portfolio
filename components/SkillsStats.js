@@ -20,7 +20,7 @@ const SkillBar = ({ name, level }) => {
 };
 
 const SkillCategory = ({ title, skills }) => (
-    <div className="bg-white dark:bg-slate-900 border border-gray-200 dark:border-gray-800 p-6 rounded-lg shadow-xl hover:scale-[1.02] transition-transform duration-300">
+    <div className="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 p-6 rounded-lg shadow-xl hover:scale-[1.02] transition-transform duration-300 tilt-card neon-border">
         <h2 className="text-xl font-bold mb-6 border-b-2 border-blue-500 inline-block pb-1">{title}</h2>
         <div>
             {skills.map((skill, index) => (
@@ -33,7 +33,7 @@ const SkillCategory = ({ title, skills }) => (
 const SkillsStats = () => {
     return (
         <div className="mt-10 laptop:mt-30 p-2 laptop:p-0">
-            <h1 className="text-3xl text-bold mb-10">System Stats.</h1>
+            <h1 className="text-3xl font-bold text-white mb-10">Stats.</h1>
             <div className="grid grid-cols-1 md:grid-cols-2 laptop:grid-cols-3 gap-6">
                 <SkillCategory title="Languages" skills={data.resume.languages} />
                 <SkillCategory title="Frameworks & Engines" skills={data.resume.frameworks} />

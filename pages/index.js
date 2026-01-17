@@ -11,6 +11,8 @@ import Head from "next/head";
 import Button from "../components/Button";
 import Link from "next/link";
 import Cursor from "../components/Cursor";
+import AnimatedBackground from "../components/AnimatedBackground";
+import TypingAnimation from "../components/TypingAnimation";
 
 // Dedidated Sections
 import CivilSathiSection from "../components/CivilSathiSection";
@@ -72,6 +74,7 @@ export default function Home() {
   return (
     <div className={`relative ${data.showCursor && "cursor-none"}`}>
       {data.showCursor && <Cursor />}
+      <AnimatedBackground />
       <Head>
         <title>{data.name}</title>
       </Head>
@@ -85,37 +88,52 @@ export default function Home() {
           handleAboutScroll={handleAboutScroll}
           handleArchitectureScroll={handleArchitectureScroll}
         />
-        <div className="laptop:mt-20 mt-10">
+        <div className="laptop:mt-20 mt-10 min-h-[70vh] flex flex-col justify-center relative">
           <div className="mt-5">
 
 
             <h1
               ref={textOne}
-              className="text-3xl tablet:text-6xl laptop:text-6xl laptopl:text-8xl p-1 tablet:p-2 text-bold w-4/5 mob:w-full laptop:w-4/5"
+              className="text-3xl tablet:text-6xl laptop:text-6xl laptopl:text-8xl p-1 tablet:p-2 font-bold w-4/5 mob:w-full laptop:w-4/5"
             >
               {data.headerTaglineOne}
             </h1>
             <h1
               ref={textTwo}
-              className="text-3xl tablet:text-6xl laptop:text-6xl laptopl:text-8xl p-1 tablet:p-2 text-bold w-full laptop:w-4/5"
+              className="text-3xl tablet:text-6xl laptop:text-6xl laptopl:text-8xl p-1 tablet:p-2 font-semibold w-full laptop:w-4/5 text-gray-300"
             >
-              {data.headerTaglineTwo}
+              I'm{" "}
+              <span className="gradient-text font-bold">{data.name}</span>
             </h1>
             <h1
               ref={textThree}
-              className="text-3xl tablet:text-6xl laptop:text-6xl laptopl:text-8xl p-1 tablet:p-2 text-bold w-full laptop:w-4/5"
+              className="text-3xl tablet:text-6xl laptop:text-6xl laptopl:text-8xl p-1 tablet:p-2 font-semibold w-full laptop:w-4/5"
             >
-              {data.headerTaglineThree}
+              <TypingAnimation
+                texts={[
+                  "Founder of CivilSathi",
+                  "Full-Stack Developer",
+                  "Game Dev & Designer",
+                  "Music Producer",
+                  "BIM Architect"
+                ]}
+                typingSpeed={80}
+                deletingSpeed={40}
+                pauseDuration={2500}
+                className="gradient-text"
+              />
             </h1>
             <h1
               ref={textFour}
-              className="text-3xl tablet:text-6xl laptop:text-6xl laptopl:text-8xl p-1 tablet:p-2 text-bold w-full laptop:w-4/5"
+              className="text-3xl tablet:text-6xl laptop:text-6xl laptopl:text-8xl p-1 tablet:p-2 font-medium w-full laptop:w-4/5 text-gray-400"
             >
               {data.headerTaglineFour}
             </h1>
           </div>
 
           <Socials className="mt-2 laptop:mt-5" />
+
+
         </div>
 
         {/* 1. CivilSathi (Founder) Section */}
