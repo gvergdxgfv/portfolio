@@ -56,7 +56,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog, handleArchitectur
             >
               {/* Gradient Border Effect */}
               <div className="p-[1px] bg-gradient-to-br from-purple-500 via-pink-500 to-cyan-500 rounded-2xl">
-                <div className={`${theme === "dark" ? "bg-slate-900" : "bg-white"} rounded-2xl p-6`}>
+                <div className="bg-slate-900 rounded-2xl p-6">
                   {/* Header */}
                   <div className="flex items-center justify-between mb-6 pb-4 border-b border-gray-700/30">
                     <span className="text-lg font-bold gradient-text">Navigation</span>
@@ -155,14 +155,11 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog, handleArchitectur
         )}
       </Popover>
       <div
-        className={`mt-10 hidden flex-row items-center justify-between sticky top-0 z-50 tablet:flex p-4 rounded-2xl mb-10 transition-all duration-300 ${theme === "dark"
-          ? "bg-slate-900/80 backdrop-blur-xl border border-slate-700/50 shadow-lg shadow-purple-500/10"
-          : "bg-white/90 backdrop-blur-xl border border-gray-200 shadow-lg"
-          }`}
+        className="mt-10 hidden flex-row items-center justify-between sticky top-0 z-50 tablet:flex p-4 rounded-2xl mb-10 transition-all duration-300 bg-slate-900/80 backdrop-blur-xl border border-slate-700/50 shadow-lg shadow-purple-500/10"
       >
         <h1
           onClick={() => router.push("/")}
-          className={`font-bold text-xl cursor-pointer mob:p-2 laptop:p-0 ${theme === "dark" ? "text-white" : "text-gray-900"} hover:text-purple-400 transition-colors`}
+          className="font-bold text-xl cursor-pointer mob:p-2 laptop:p-0 text-white hover:text-purple-400 transition-colors"
         >
           {name}.
         </h1>
