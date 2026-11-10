@@ -1,5 +1,5 @@
 
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import Header from "../components/Header";
 import ServiceCard from "../components/ServiceCard";
 import Socials from "../components/Socials";
@@ -38,6 +38,29 @@ export default function Home() {
   const textThree = useRef();
   const textFour = useRef();
 
+  useEffect(() => {
+    const revealItems = document.querySelectorAll("[data-reveal]");
+    if (!("IntersectionObserver" in window)) {
+      revealItems.forEach((item) => item.classList.add("is-visible"));
+      return undefined;
+    }
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.12 }
+    );
+
+    revealItems.forEach((item) => observer.observe(item));
+    return () => observer.disconnect();
+  }, []);
+
   // Handling Scroll
   const handleWorkScroll = () => {
     window.scrollTo({
@@ -72,11 +95,22 @@ export default function Home() {
   }, []);
 
   return (
-    <div className={`relative ${data.showCursor && "cursor-none"}`}>
+    <div className={`relative ${data.showCursor && "laptop:cursor-none"}`}>
       {data.showCursor && <Cursor />}
       <AnimatedBackground />
       <Head>
         <title>{data.name}</title>
+        <meta
+          name="description"
+          content="Vedant Tiwari is a creative technologist and founder of CivilSathi, building construction tech, games, and immersive digital experiences."
+        />
+        <meta name="theme-color" content="#07070a" />
+        <meta property="og:title" content="Vedant Tiwari — Creative Technologist" />
+        <meta
+          property="og:description"
+          content="Building CivilSathi and exploring games, architecture, and sound."
+        />
+        <meta property="og:type" content="website" />
       </Head>
 
       <div className="gradient-circle"></div>
@@ -88,8 +122,13 @@ export default function Home() {
           handleAboutScroll={handleAboutScroll}
           handleArchitectureScroll={handleArchitectureScroll}
         />
-        <div className="laptop:mt-20 mt-10 min-h-[70vh] flex flex-col justify-center relative">
-          <div className="mt-5">
+        <main>
+        <div className="hero-shell laptop:mt-20 mt-10 min-h-[70vh] flex flex-col justify-center relative">
+          <div className="hero-copy mt-5" data-reveal>
+            <div className="eyebrow mb-5">
+              <span className="eyebrow-dot" />
+              Creative technologist / founder / builder
+            </div>
 
 
             <h1
@@ -102,7 +141,7 @@ export default function Home() {
               ref={textTwo}
               className="text-3xl tablet:text-6xl laptop:text-6xl laptopl:text-8xl py-1 tablet:py-2 font-semibold w-full laptop:w-4/5 text-gray-300"
             >
-              I'm{" "}
+              I&apos;m{" "}
               <span className="gradient-text font-bold">{data.name}</span>
             </h1>
             <h1
@@ -132,44 +171,47 @@ export default function Home() {
           </div>
 
           <Socials className="mt-2 laptop:mt-5" />
-
-
+          <div className="hero-scroll-hint" aria-hidden="true">
+            <span>Scroll to explore</span>
+            <span className="hero-scroll-line" />
+          </div>
         </div>
 
         {/* 1. CivilSathi (Founder) Section */}
-        <div ref={civilRef}>
+        <section ref={civilRef} data-reveal>
           <CivilSathiSection />
-        </div>
+        </section>
 
         {/* 2. Game Section */}
-        <div ref={gameRef}>
+        <section ref={gameRef} data-reveal>
           <GameSection />
-        </div>
+        </section>
 
         {/* 3. Music Section (Moved Above Architecture) */}
-        <div ref={musicRef}>
+        <section ref={musicRef} data-reveal>
           <MusicSection />
-        </div>
+        </section>
 
         {/* 4. Architecture Section */}
-        <div ref={architectureRef}>
+        <section ref={architectureRef} data-reveal>
           <ArchitectureSection />
-        </div>
+        </section>
 
         {/* 5. Skills Section (Moved to Bottom) */}
         {/* 5. Skills Stats Section */}
-        <div ref={skillsRef}>
+        <section ref={skillsRef} data-reveal>
           <SkillsStats />
-        </div>
+        </section>
 
         {/* About / Contact */}
-        <div ref={aboutRef}>
+        <section ref={aboutRef} data-reveal>
           <div className="mt-10 laptop:mt-40">
             <h1 className="text-2xl text-bold">About.</h1>
             <p className="tablet:m-10 mt-2 text-xl laptop:text-3xl w-full laptop:w-3/5">
               {data.aboutpara}
             </p>
-          </div>
+          </section>
+          </main>
           <Footer />
         </div>
       </div>
